@@ -34,7 +34,7 @@ const resolvers = {
                     console.log("webHook",webHookRes);
                 } catch (error) {
                     if(error.response.status == 404){
-                        singleData.activeWebHooks = 1;
+                        singleData.activeWebHooks = 0;
                     }
                 }
                 return singleData
