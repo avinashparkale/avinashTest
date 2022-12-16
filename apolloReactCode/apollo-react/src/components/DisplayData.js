@@ -19,14 +19,12 @@ function DisplayData(){
         fetchRepo({
             variables: {
               username1: repo,
-            }})
-        console.log(repoData)    
+            }})  
     }
 
     if(data){
         console.log(data);
         let tags = data.Repos.map((repo)=>{
-            console.log(repo.name)
             return <tr>
                 <td>{repo.name}</td>
                 <td>{repo.owner.login}</td>
