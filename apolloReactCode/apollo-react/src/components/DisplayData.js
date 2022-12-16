@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { useQuery, useLazyQuery, gql } from "@apollo/client";
-import {QUERY_ALL_REPOS, QUERY_REPODETAILS} from './models.js/gql'
-import {RepoDetailComp} from './components/RepoDetailComp';
+import {QUERY_ALL_REPOS, QUERY_REPODETAILS} from '../models.js/gql'
+import {RepoDetailComp} from './RepoDetailComp';
 
 function DisplayData(){
     const [repo, setRepo] = useState("");

@@ -7,7 +7,7 @@ export function RepoDetailComp(props){
               <div>Repo owner: {props.repodata.owner.login}</div>
               <div>Private\public repo: {props.repodata.private ? 'Private' : 'Public'}</div>
               <div>Number of files in the repo: {props.repodata.NoOfFilesInRepo}</div>
-              <div>Content of 1 yml file (any one that appear in the repo): {props.repodata.FileContent}</div>
+              <div>Content of file : {props.repodata.FileContent}</div>
             </div>
     </div>
 }
