@@ -23,6 +23,7 @@ query RepoDetails($username1: String) {
       size
       private
       NoOfFilesInRepo
+      activeWebHooks
       FileContent
     }
   }

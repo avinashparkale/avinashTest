@@ -17,6 +17,7 @@ const typeDefs = gql`
     private: Boolean
     NoOfFilesInRepo: Int
     FileContent: String
+    activeWebHooks: String
   }
   type Query {
     Repos: [Repo]

@@ -28,22 +28,19 @@ const resolvers = {
                 const buff = Buffer.from(fileContent.data.content, 'base64');
                 const str = buff.toString('utf-8');
                 singleData.FileContent = str;
+                try {
+                    let webHookApiUrl= `https://api.github.com/repos/avinashparkale/${name}/hooks`;
+                    let webHookRes = await axios.get(webHookApiUrl);
+                    console.log("webHook",webHookRes);
+                } catch (error) {
+                    if(error.response.status == 404){
+                        singleData.activeWebHooks = 1;
+                    }
+                }
                 return singleData
             }
         },
     },
 };
 
-// async function getUserRepos() {
-//     try {
-//         const response = await axios.get("https://api.github.com/users/avinashparkale/repos", {
-//             OAUth: process.env.GITHUB_ACCESS_TOKEN
-//         });
-//         data = response.data;
-//         return data;
-//     }
-//     catch (error) {
-//         console.log(error);
-//     }
-// }
 module.exports = { resolvers };
